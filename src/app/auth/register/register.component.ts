@@ -15,10 +15,10 @@ export class RegisterComponent {
 
   public registerForm = this.formBuilder.group(
     {
-      nombre: ['sarahinwn', Validators.required],
-      email: ['riej98@gmail.com', [Validators.required, Validators.email]],
-      password: ['123', Validators.required],
-      password2: ['123', Validators.required],
+      nombre: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', Validators.required],
+      password2: ['', Validators.required],
       terminos: [false, Validators.requiredTrue],
     },
     {
@@ -57,8 +57,6 @@ export class RegisterComponent {
       },
       (err) => console.warn(err)
       );
-    } else {
-      console.log('Formulario no válido');
     }
   }
 

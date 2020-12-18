@@ -81,8 +81,6 @@ export class UpdatepassComponent {
         },
         (err) => console.warn(err)
       );
-    } else {
-      console.log('Formulario no válido');
     }
   }
 

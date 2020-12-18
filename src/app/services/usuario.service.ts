@@ -37,8 +37,7 @@ export class UsuarioService {
 
   validarToken():Observable<boolean> {
     const token = localStorage.getItem('token') || '';
-    console.log(token);
-    return this.http.get(`${base_url}/login/renew`, {
+    return this.http.get(`${base_url}/login/update`, {
       headers: {
         'x-token': token
       },
@@ -57,7 +56,7 @@ export class UsuarioService {
   }
 
   updatePassword(formData: PasswordForm) {
-    return this.http.put(`${base_url}/usuarios/updatepass`, formData);
+    return this.http.put(`${base_url}/usuarios/updatepassword`, formData);
   }
 
 }
